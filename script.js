@@ -65,10 +65,44 @@ function loadSavedGoal() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const recommendButton = document.getElementById("recommend-button");
+    const requestForm = document.getElementById("request-form");
 
     if (recommendButton) {
         recommendButton.addEventListener("click", recommendClass);
     }
 
+    if (requestForm) {
+        requestForm.addEventListener("submit", validateRequestForm);
+    }
+
     loadSavedGoal();
 });
+
+function validateRequestForm(event) {
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const nameError = document.getElementById("name-error");
+    const emailError = document.getElementById("email-error");
+
+    let isValid = true;
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+
+    if (nameInput.value.trim().length < 2) {
+        nameError.textContent = "Please enter your name.";
+        isValid = false;
+    }
+
+    if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+    }
+
+    if (!isValid) {
+    event.preventDefault();
+    return false;
+}
+
+return true;
+}

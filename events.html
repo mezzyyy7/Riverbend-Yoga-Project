@@ -70,18 +70,20 @@
     <section>
         <h2>Request a Spot</h2>
 
-        <form action="#" method="post">
+        <form id="request-form" action="#" method="post" novalidate onsubmit="return validateRequestForm(event)">
             <fieldset>
                 <legend>Your Information</legend>
 
                 <p>
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required>
+                    <p id="name-error" class="error-message"></p>
                 </p>
 
                 <p>
                     <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" required>
+                    <p id="email-error" class="error-message"></p>
                 </p>
             </fieldset>
 
@@ -150,6 +152,6 @@
     <p>&copy; 2026 Riverbend Yoga Studio</p>
     <p>We look forward to practicing with you.</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
