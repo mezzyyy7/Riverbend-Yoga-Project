@@ -23,6 +23,23 @@
 
 <main>
 	<section>
+    <h2>Find Your Yoga Class</h2>
+    <p>Choose what you want most from your yoga practice and we'll suggest a class that may fit you.</p>
+
+    <label for="yoga-goal">What is your main goal?</label>
+
+    <select id="yoga-goal">
+        <option value="">Select a goal</option>
+        <option value="relaxation">Improve flexibility and relax</option>
+        <option value="energy">Build energy and stay active</option>
+        <option value="stress">Reduce stress and slow down</option>
+    </select>
+
+    <button type="button" id="recommend-button">Find My Class</button>
+
+    <div id="class-result" aria-live="polite"></div>
+</section>
+	<section>
 		<h2>Classes for Every Experience Level</h2>
 		<p>
 			Riverbend Yoga Studio offers several class styles so students can
@@ -98,6 +115,6 @@
 	<p>&copy; 2026 Riverbend Yoga Studio</p>
 	<p>Questions about classes? Visit our Events page to request information.</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
