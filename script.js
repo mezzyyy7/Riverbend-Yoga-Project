@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function validateRequestForm(event) {
+    event.preventDefault();
+
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const nameError = document.getElementById("name-error");
@@ -90,19 +92,20 @@ function validateRequestForm(event) {
     emailError.textContent = "";
 
     if (nameInput.value.trim().length < 2) {
-        nameError.textContent = "Please enter your name.";
+        nameError.textContent = "Name must be at least 2 characters.";
         isValid = false;
     }
 
-    if (!emailInput.value.includes("@") || !emailInput.value.includes(".")) {
+    if (
+        !emailInput.value.includes("@") ||
+        !emailInput.value.includes(".")
+    ) {
         emailError.textContent = "Please enter a valid email address.";
         isValid = false;
     }
 
-    if (!isValid) {
-    event.preventDefault();
-    return false;
-}
-
-return true;
+    if (isValid) {
+        alert("Your request has been submitted!");
+        document.getElementById("request-form").reset();
+    }
 }
