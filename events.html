@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Riverbend Yoga Studio | Events</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header>
@@ -22,8 +26,10 @@
 </header>
 
 <main>
+
     <section>
         <h2>Monthly Workshops</h2>
+
         <p>
             Our monthly workshops give students additional time to explore yoga,
             breathing, relaxation, and movement in a supportive setting.
@@ -31,6 +37,7 @@
 
         <article>
             <h3>Yoga Basics Workshop</h3>
+
             <p>
                 Designed for beginners, this workshop covers basic poses,
                 breathing techniques, and ways to safely modify movements.
@@ -39,14 +46,16 @@
 
         <article>
             <h3>Rest and Restore Evening</h3>
+
             <p>
-                A slow-paced workshop featuring restorative poses, mindful
-                breathing, and guided relaxation.
+                A slow-paced workshop featuring restorative poses,
+                mindful breathing, and guided relaxation.
             </p>
         </article>
 
         <article>
             <h3>Mobility and Balance Workshop</h3>
+
             <p>
                 This workshop focuses on comfortable movements that support
                 balance, mobility, and confidence during everyday activities.
@@ -54,104 +63,223 @@
         </article>
     </section>
 
+
     <section>
         <h2>Featured Workshop</h2>
 
         <figure>
-            <img src="yoga-workshop_c.png"
-                 alt="Yoga instructor guiding students through a group workshop">
+            <img
+                src="yoga-workshop_c.png"
+                alt="Yoga instructor guiding students through a group workshop"
+            >
+
             <figcaption>
-                Riverbend's monthly workshops give students additional time to
-                learn, ask questions, and practice in a supportive environment.
+                Riverbend's monthly workshops give students additional time
+                to learn, ask questions, and practice in a supportive environment.
             </figcaption>
         </figure>
     </section>
 
+
     <section>
         <h2>Request a Spot</h2>
 
-        <form id="request-form" action="#" method="post" novalidate>
+        <form id="request-form" novalidate>
+
             <fieldset>
                 <legend>Your Information</legend>
 
-                <p>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required>
-                    <p id="name-error" class="error-message"></p>
-                </p>
+                <div>
+                    <label for="name">Name:</label>
+                    <br>
 
-                <p>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
-                    <p id="email-error" class="error-message"></p>
-                </p>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                    >
+
+                    <p
+                        id="name-error"
+                        class="error-message"
+                        aria-live="polite"
+                    ></p>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <br>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
+                    <p
+                        id="email-error"
+                        class="error-message"
+                        aria-live="polite"
+                    ></p>
+                </div>
             </fieldset>
+
 
             <fieldset>
                 <legend>Class or Event Preferences</legend>
 
-                <p>
-                    <label for="interest">Class or event interest:</label><br>
-                    <select id="interest" name="interest" required>
-                        <option value="">Select an option</option>
-                        <option value="gentle">Gentle Yoga</option>
-                        <option value="vinyasa">Vinyasa Flow</option>
-                        <option value="restorative">Restorative Yoga</option>
-                        <option value="basics-workshop">Yoga Basics Workshop</option>
-                        <option value="restore-workshop">Rest and Restore Evening</option>
-                        <option value="mobility-workshop">Mobility and Balance Workshop</option>
-                    </select>
-                </p>
+                <div>
+                    <label for="interest">
+                        Class or event interest:
+                    </label>
 
-                <p>
-                    <label for="experience">Experience level:</label><br>
-                    <select id="experience" name="experience" required>
-                        <option value="">Select your experience level</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="some-experience">Some experience</option>
-                        <option value="experienced">Experienced</option>
+                    <br>
+
+                    <select
+                        id="interest"
+                        name="interest"
+                        required
+                    >
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option value="gentle">
+                            Gentle Yoga
+                        </option>
+
+                        <option value="vinyasa">
+                            Vinyasa Flow
+                        </option>
+
+                        <option value="restorative">
+                            Restorative Yoga
+                        </option>
+
+                        <option value="basics-workshop">
+                            Yoga Basics Workshop
+                        </option>
+
+                        <option value="restore-workshop">
+                            Rest and Restore Evening
+                        </option>
+
+                        <option value="mobility-workshop">
+                            Mobility and Balance Workshop
+                        </option>
                     </select>
-                </p>
+                </div>
+
+
+                <div>
+                    <label for="experience">
+                        Experience level:
+                    </label>
+
+                    <br>
+
+                    <select
+                        id="experience"
+                        name="experience"
+                        required
+                    >
+                        <option value="">
+                            Select your experience level
+                        </option>
+
+                        <option value="beginner">
+                            Beginner
+                        </option>
+
+                        <option value="some-experience">
+                            Some experience
+                        </option>
+
+                        <option value="experienced">
+                            Experienced
+                        </option>
+                    </select>
+                </div>
             </fieldset>
+
 
             <fieldset>
                 <legend>Preferred Contact Method</legend>
 
-                <p>
-                    <input type="radio" id="contact-email" name="contact-method"
-                           value="email" required>
-                    <label for="contact-email">Email</label>
-                </p>
+                <div>
+                    <input
+                        type="radio"
+                        id="contact-email"
+                        name="contact-method"
+                        value="email"
+                        required
+                    >
 
-                <p>
-                    <input type="radio" id="contact-phone" name="contact-method"
-                           value="phone">
-                    <label for="contact-phone">Phone</label>
-                </p>
+                    <label for="contact-email">
+                        Email
+                    </label>
+                </div>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="contact-phone"
+                        name="contact-method"
+                        value="phone"
+                    >
+
+                    <label for="contact-phone">
+                        Phone
+                    </label>
+                </div>
             </fieldset>
+
 
             <fieldset>
                 <legend>Additional Information</legend>
 
-                <p>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message"
-                              rows="6" cols="40"
-                              minlength="10"
-                              maxlength="500"
-                              required></textarea>
-                </p>
+                <div>
+                    <label for="message">
+                        Message:
+                    </label>
+
+                    <br>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        cols="40"
+                        minlength="10"
+                        maxlength="500"
+                        required
+                    ></textarea>
+                </div>
             </fieldset>
 
-            <button type="submit">Request a Spot</button>
+
+            <button type="submit">
+                Request a Spot
+            </button>
+
         </form>
     </section>
+
 </main>
+
 
 <footer>
     <p>&copy; 2026 Riverbend Yoga Studio</p>
-    <p>We look forward to practicing with you.</p>
+
+    <p>
+        We look forward to practicing with you.
+    </p>
 </footer>
-<script src="script.js?v=2"></script>
+
+
+<script src="script.js?v=3"></script>
+
 </body>
 </html>
